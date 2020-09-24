@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // ログイン中に　"/" へアクセスした場合に "/dashboard" にリダイレクトする
+    if (Auth::check()) {
+        return redirect()->route('dashboard');
+    }
+
     return view('welcome');
 });
 
