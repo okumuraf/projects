@@ -10,3 +10,8 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# デプロイ時に "yarn run prod" でコンパイルするため管理対象から除外
+/public/css
+/public/js
+/public/mix-manifest.json
